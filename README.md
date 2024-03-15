@@ -4,7 +4,7 @@ This Flutter app is developed as part of a coding challenge for SaveStrike, show
 
 ## Development Duration
 
-14.march.2024 - 15.march.2024
+13.march.2024 - 14.march.2024
 10 Hours combined
 
 ## Getting Started
