@@ -1,12 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:save_strike/src/features/favorite/presentation/favorite_screen_controller.dart';
 import 'package:save_strike/src/features/favorite/presentation/widgetholders/add_favorite_group_widgetholder.dart';
-import 'package:save_strike/src/features/favorite/presentation/widgets/add_favorite_group_widget.dart';
 import 'package:save_strike/src/routing/app_router.dart';
 import 'package:shimmer/shimmer.dart';
 

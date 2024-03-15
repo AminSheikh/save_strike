@@ -41,7 +41,7 @@ class FavoriteScreenHeaderDelegate extends SliverPersistentHeaderDelegate {
                             size: 12,
                             color: Color.fromRGBO(32, 197, 20, 1),
                           ),
-                          alignment: PlaceholderAlignment.top,
+                          alignment: PlaceholderAlignment.middle,
                         ),
                         TextSpan(
                           text: "10.435,",
@@ -57,7 +57,7 @@ class FavoriteScreenHeaderDelegate extends SliverPersistentHeaderDelegate {
                           style: const TextStyle(
                             fontFamily: 'MarkPro',
                             fontWeight: FontWeight.w600,
-                            fontSize: 16,
+                            fontSize: 14,
                             color: Color.fromRGBO(32, 197, 20, 1),
                           ),
                         ),
