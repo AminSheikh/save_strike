@@ -18,8 +18,8 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  PageController controller = PageController();
-  static dynamic currentPageValue = 0.0;
+  late PageController controller;
+  dynamic currentPageValue = 0.0;
 
   final List<OnboardingItem> onboardingList = [
     OnboardingItem(
@@ -48,11 +48,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   void initState() {
     super.initState();
+    controller = PageController(initialPage: 0);
     controller.addListener(() {
       setState(() {
         currentPageValue = controller.page;
       });
     });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -70,6 +77,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: PageView.builder(
                     controller: controller,
                     itemCount: onboardingList.length,
+                    physics: ClampingScrollPhysics(),
                     onPageChanged: (index) {
                       setState(() {
                         currentIndexPage = index;

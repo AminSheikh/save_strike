@@ -29,28 +29,6 @@ class OnboardingWidget extends StatelessWidget {
               fit: BoxFit.contain,
               onboardingItem.imagePath,
             ),
-            // Container(
-            //   padding: EdgeInsets.symmetric(horizontal: 20),
-            //   child: ShaderMask(
-            //     blendMode: BlendMode.srcIn,
-            //     shaderCallback: (bounds) => LinearGradient(
-            //       colors: [
-            //         Color.fromRGBO(1, 138, 190, 1),
-            //         Color.fromRGBO(2, 69, 122, 1)
-            //       ],
-            //     ).createShader(
-            //       Rect.fromLTWH(0, 0, bounds.width, bounds.height),
-            //     ),
-            //     child: Text(
-            //       onboardingItem.text,
-            //       style: TextStyle(
-            //         fontSize: 24,
-            //         fontWeight: FontWeight.w500,
-            //       ),
-            //     ),
-            //   ),
-            // ),
-
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: ShaderMask(
