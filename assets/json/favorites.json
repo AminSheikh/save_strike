@@ -1,0 +1,63 @@
+[
+    {
+        "id": "group1",
+        "favorites": [
+            {
+                "id": "fav1",
+                "image": "assets/jpg/bike.jpg"
+            },
+            {
+                "id": "fav2",
+                "image": "assets/jpg/iphone.jpg"
+            },
+            {
+                "id": "fav3",
+                "image": "assets/jpg/bag.jpg"
+            },
+            {
+                "id": "fav4",
+                "image": "assets/jpg/shoe.jpg"
+            },
+            {
+                "id": "fav5",
+                "image": "assets/jpg/shoe.jpg"
+            },
+            {
+                "id": "fav6",
+                "image": "assets/jpg/shoe.jpg"
+            }
+        ],
+        "groupName": "Alle Favoriten",
+        "numberOfElements": 6
+    },
+    {
+        "id": "group2",
+        "favorites": [
+            {
+                "id": "fav1",
+                "image": "assets/jpg/backpack.jpg"
+            },
+            {
+                "id": "fav2",
+                "image": "assets/jpg/pack.jpg"
+            },
+            {
+                "id": "fav3",
+                "image": "assets/jpg/bag.jpg"
+            }
+        ],
+        "groupName": "Neuer Rucksack",
+        "numberOfElements": 3
+    },
+    {
+        "id": "group3",
+        "favorites": [
+            {
+                "id": "fav1",
+                "image": "assets/jpg/bike.jpg"
+            }
+        ],
+        "groupName": "E-Bike",
+        "numberOfElements": 1
+    }
+]
