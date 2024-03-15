@@ -2,6 +2,11 @@
 
 This Flutter app is developed as part of a coding challenge for SaveStrike, showcasing an Intro screen with carousel flow, a Home screen with dummy data, and various other features as outlined in the development process.
 
+## Development Duration
+
+14.march.2024 - 15.march.2024
+10 Hours combined
+
 ## Getting Started
 
 To run this app on your system, follow these steps:
