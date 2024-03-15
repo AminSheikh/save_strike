@@ -1,7 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import '../../../../style/custom_icons/save_strike_icons.dart';
 
 class AddFavoriteGroupWidget extends StatelessWidget {

@@ -1,9 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:save_strike/src/features/onboarding/domain/onboarding_item.dart';
 import 'package:save_strike/src/features/onboarding/presentation/onboarding_widget.dart';
@@ -20,6 +18,9 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  PageController controller = PageController();
+  static dynamic currentPageValue = 0.0;
+
   final List<OnboardingItem> onboardingList = [
     OnboardingItem(
       imagePath: "./assets/png/onboarding/1.png",
@@ -45,6 +46,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int currentIndexPage = 0;
 
   @override
+  void initState() {
+    super.initState();
+    controller.addListener(() {
+      setState(() {
+        currentPageValue = controller.page;
+      });
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -57,6 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   duration: Duration(milliseconds: 200),
                   color: onboardingList[currentIndexPage].backgroundColor,
                   child: PageView.builder(
+                    controller: controller,
                     itemCount: onboardingList.length,
                     onPageChanged: (index) {
                       setState(() {
@@ -65,7 +77,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     },
                     itemBuilder: (context, index) {
                       final onboardingItem = onboardingList[index];
-                      return OnboardingWidget(onboardingItem: onboardingItem);
+                      return Transform(
+                        transform: Matrix4.identity()
+                          ..rotateX(currentPageValue - index),
+                        child: OnboardingWidget(onboardingItem: onboardingItem),
+                      );
                     },
                   ),
                 ),
@@ -114,6 +130,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           fontSize: 16,
                           color: Color.fromRGBO(36, 216, 241, 1),
                           fontWeight: FontWeight.w500,
+                          fontFamily: "MarkPro",
                         ),
                       ),
                     ),
@@ -142,6 +159,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               fontSize: 16,
                               color: Colors.white,
                               fontWeight: FontWeight.w500,
+                              fontFamily: "MarkPro",
                             ),
                           ),
                         ),
